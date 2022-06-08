@@ -4,12 +4,7 @@ describe('Testes End to End ', () => {
     beforeEach(() => {
       cy.visit("qa-test/")
     })
-    const getIframeBody = () => {
-        return cy
-        .get('#iframe_panel_body iframe')
-        .its('0.contentDocument.body').should('not.be.empty')
-        .then(cy.wrap)
-    }
+  
       it('Clicar nos botões e verificar se os mesmo sumiram ', () => {
         
         cy.get('#btn_one').click()
@@ -21,7 +16,14 @@ describe('Testes End to End ', () => {
   
       })
   
-      it('Clicar nos botões dentro de IFrame Buttons e verificar se os mesmo sumiram ', () => {
+      it('Clicar nos botões dentro de IFrame Buttons e verificar se os mesmos sumiram ', () => {
+
+        const getIframeBody = () => {
+            return cy
+            .get('#iframe_panel_body iframe')
+            .its('0.contentDocument.body').should('not.be.empty')
+            .then(cy.wrap)
+        }
 
         getIframeBody().find('#btn_one').click()
         getIframeBody().find('#btn_one').should('not.be.visible')
@@ -33,12 +35,13 @@ describe('Testes End to End ', () => {
   
       })
 
-      it('Clicar nos botões e verificar se os mesmo sumiram ', () => {
+      it('Preencher campo de texto, clicar no botão, checar opção e selecionar input', () => {
         
         cy.get('#first_name').type("teste")
         cy.get('#btn_one').click()
         cy.get('#opt_three').check()
         cy.get('#select_box').select("option_two")
+        cy.get('[alt="selenium"]').should('be.visible')
   
       })
 
