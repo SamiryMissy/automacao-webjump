@@ -1,0 +1,24 @@
+{
+  "name": "automacao-webjump",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamiryMissy/automacao-webjump.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamiryMissy/automacao-webjump/issues"
+  },
+  "homepage": "https://wj-qa-automation-test.github.io/qa-test/",
+  "devDependencies": {
+    "cypress": "^8.3.0",
+    "cypress-iframe": "^1.0.1"
+  }
+}

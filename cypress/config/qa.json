@@ -1,0 +1,9 @@
+{
+    "baseUrl" : "https://wj-qa-automation-test.github.io",
+    "watchForFileChanges"  : false,
+    "chromeWebSecurity": false, 
+    "defaultCommandTimeout": 70000,
+    "responseTimeout": 70000,
+    "browser": "chrome",
+    "language": "portuguese"
+}
